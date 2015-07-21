@@ -1,10 +1,16 @@
 #include<iostream>
 #include <SFML/Graphics.hpp>
 #include "../Blocks/Blocks.hpp"
+#include<vector>
+#include <cstdlib>
+
+using namespace std;
 
 class Terrain{
 public:
-    Stone stones[13];
+    int number_blocks = 13;
+    std::vector<Stone> stones;
     Terrain();
-    void draw(sf::Window);
+    void createStones(int);
+    void draw(sf::RenderWindow&);
 };

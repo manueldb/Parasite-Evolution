@@ -1,16 +1,16 @@
 #include "Main.hpp"
 
 int main(){
+    //initialize terrain
+    Terrain terrain;
+    terrain.createStones(terrain.number_blocks);
+    //----//
 
     //initialize window
-    sf::RenderWindow window(sf::VideoMode(800,600), "Parasite Evolution");
+    sf::RenderWindow window(sf::VideoMode(800, 600), "Parasite Evolution");
     window.setVerticalSyncEnabled(true);
     window.setFramerateLimit(60);
     window.setPosition(sf::Vector2i(300, 100));
-    //----//
-
-    //initialize terrain
-    Terrain terrain;
     //----//
 
     //game loop
