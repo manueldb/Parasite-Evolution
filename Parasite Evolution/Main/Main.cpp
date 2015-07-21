@@ -75,3 +75,12 @@ int main(){
 
     return 0;
 }
+
+
+/*
+TODO TOMORROW
+
+player animation while moving
+player crawl over blocks or jump? maybe both? implement it
+end terrain generation algorithm (destroy that bug), with the noise function
+*/
