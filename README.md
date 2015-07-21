@@ -1,2 +1,4 @@
 # Parasite-Evolution
-2D game
+
+
+Parasite Evolution will be a 2D survival game.
