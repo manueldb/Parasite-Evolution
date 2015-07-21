@@ -9,8 +9,8 @@ int main(){
     window.setPosition(sf::Vector2i(300, 100));
     //----//
 
-    //initialize stone block
-    Stone stone;
+    //initialize terrain
+    Terrain terrain;
     //----//
 
     //game loop
@@ -24,8 +24,12 @@ int main(){
 
         }
 
-        window.clear(sf::Color(20,180,180));
-        window.draw(stone.sprite);
+        window.clear(sf::Color(18,4,51));
+
+        //draw terrain
+        terrain.draw(window);
+        //----//
+
         window.display();
     }
     //----//
