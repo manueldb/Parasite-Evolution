@@ -3,13 +3,14 @@
 	<iostream>
 	<SFML/Graphics.hpp>
 
-1437520118 source:/home/manumanel/Parasite-Evolution/Parasite Evolution/Main/Main.cpp
+1437522179 source:/home/manumanel/Parasite-Evolution/Parasite Evolution/Main/Main.cpp
 	"Main.hpp"
 
-1437506203 /home/manumanel/Parasite-Evolution/Parasite Evolution/Main/Main.hpp
+1437521575 /home/manumanel/Parasite-Evolution/Parasite Evolution/Main/Main.hpp
 	<iostream>
 	<SFML/Graphics.hpp>
 	"../Terrain/Terrain.hpp"
+	"../Player/Player.hpp"
 
 1437503529 /home/manumanel/Parasite-Evolution/Parasite Evolution/Blocks/Blocks.hpp
 	<iostream>
@@ -25,6 +26,13 @@
 	<vector>
 	<cstdlib>
 
-1437520053 source:/home/manumanel/Parasite-Evolution/Parasite Evolution/Terrain/Terrain.cpp
+1437521125 source:/home/manumanel/Parasite-Evolution/Parasite Evolution/Terrain/Terrain.cpp
 	"Terrain.hpp"
+
+1437522421 /home/manumanel/Parasite-Evolution/Parasite Evolution/Player/Player.hpp
+	<iostream>
+	<SFML/Graphics.hpp>
+
+1437522364 source:/home/manumanel/Parasite-Evolution/Parasite Evolution/Player/Player.cpp
+	"Player.hpp"
 
