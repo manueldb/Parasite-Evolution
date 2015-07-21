@@ -1,0 +1,20 @@
+# depslib dependency file v1.0
+1437498425 source:/home/manumanel/Parasite-Evolution/Parasite Evolution/Main.cpp
+	<iostream>
+	<SFML/Graphics.hpp>
+
+1437503349 source:/home/manumanel/Parasite-Evolution/Parasite Evolution/Main/Main.cpp
+	"Main.hpp"
+
+1437502949 /home/manumanel/Parasite-Evolution/Parasite Evolution/Main/Main.hpp
+	<iostream>
+	<SFML/Graphics.hpp>
+	"../Blocks/Blocks.hpp"
+
+1437503529 /home/manumanel/Parasite-Evolution/Parasite Evolution/Blocks/Blocks.hpp
+	<iostream>
+	<SFML/Graphics.hpp>
+
+1437503536 source:/home/manumanel/Parasite-Evolution/Parasite Evolution/Blocks/Blocks.cpp
+	"Blocks.hpp"
+
