@@ -97,6 +97,7 @@ player collision detection with blocks - 20 min ----> DONE
 
 end terrain generation algorithm (__destroy that bug__ -- > DESTROYED), with the noise function - 3 h ------> BUG DESTROYED!! GENERATION WORKING!
 ^^^ ALMOST DONE... JUST NEED TO IMPLEMENT THE RANDOMNESS OF THE Y COORDINATE!
+Another bug emerged -> trying to create vertical blocks images are corrupted -.-
 
 
 player animation while moving - 20 min

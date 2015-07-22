@@ -5,12 +5,8 @@ Terrain::Terrain(){
     int x = 0;
     int y = 536;
     for(int i = 0; i < stones.size(); i++){
-        if(x == 64){
-        stones[i].sprite.setPosition(x, 2*x);
-        }else{
         stones[i].sprite.setPosition(x,y);
-        createVerticalStones(stones[i]);
-        }
+        //createVerticalStones(stones[i]);
         x+=64;
     }
 }
@@ -30,13 +26,13 @@ void Terrain::createStones(int new_number_blocks){
 }
 
 void Terrain::createVerticalStones(Stone stone){
-    int number_new_stones = (int)((600 - (stone.y + stone.side))/stone.side);
+    int x = stone.x;
+    int number_vertical_stones = (int)((600 - (stone.y + stone.side))/stone.side);
     int old_number_stones = stones.size();
-    stones.resize(old_number_stones + number_new_stones);
-
+    stones.resize(old_number_stones + number_vertical_stones);
     int y = 536;
-    for(int i = old_number_stones; i < stones.size(); i++){
-        stones[i].sprite.setPosition(stone.x, y);
+    for(int i = old_number_stones-1; i < number_vertical_stones; i++){
+        stones[i].sprite.setPosition(x, y);
         y-=64;
     }
 }
