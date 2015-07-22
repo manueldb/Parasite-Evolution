@@ -1,13 +1,14 @@
 #include<iostream>
 #include <SFML/Graphics.hpp>
+#include<vector>
 
 class Player{
 public:
-    int x = 300;
+    int x = 400;
     int y = 495;
     int x_speed = 1;
     sf::Sprite sprite;
-    sf::Texture texture1;
+    sf::Texture textures[7];
     Player();
 
     bool moving_right = false;

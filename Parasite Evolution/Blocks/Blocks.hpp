@@ -8,9 +8,12 @@ public:
     int side = 64;
     sf::Sprite sprite;
     sf::Texture texture;
+
+    bool collision(int, int);
 };
 
 class Stone : public Block{
 public:
     Stone();
+    void reTexture();
 };

@@ -13,4 +13,5 @@ public:
     Terrain();
     void createStones(int);
     void draw(sf::RenderWindow&);
+    int getGreatestX();
 };
