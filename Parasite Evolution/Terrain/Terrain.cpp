@@ -1,18 +1,16 @@
 #include "Terrain.hpp"
 
-/*
-    The idea is to generate the blocks as the player moves through the world.
-    Thus, we have to be able to resize the stones vector and set the positions of the new elements.
-    Unfortunately, when I try to use the createStones function, which is suposed to do this, the blocks
-    are all white... I think...
-    I am going to create the player physics to be able to test this bug better, while moving through the world
-*/
 Terrain::Terrain(){
     stones.resize(13);
     int x = 0;
     int y = 536;
     for(int i = 0; i < stones.size(); i++){
-        stones[i].sprite.setPosition(x, y);
+        if(x == 64){
+        stones[i].sprite.setPosition(x, 2*x);
+        }else{
+        stones[i].sprite.setPosition(x,y);
+        createVerticalStones(stones[i]);
+        }
         x+=64;
     }
 }
@@ -28,6 +26,18 @@ void Terrain::createStones(int new_number_blocks){
     for(int i = old_number_blocks; i < new_number_blocks; i++){
         stones[i].sprite.setPosition(x, y);
         x+=64;
+    }
+}
+
+void Terrain::createVerticalStones(Stone stone){
+    int number_new_stones = (int)((600 - (stone.y + stone.side))/stone.side);
+    int old_number_stones = stones.size();
+    stones.resize(old_number_stones + number_new_stones);
+
+    int y = 536;
+    for(int i = old_number_stones; i < stones.size(); i++){
+        stones[i].sprite.setPosition(stone.x, y);
+        y-=64;
     }
 }
 

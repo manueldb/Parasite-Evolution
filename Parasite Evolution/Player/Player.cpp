@@ -36,7 +36,7 @@ Player::Player(){
 
 void Player::moveDetection(){
     if(moving_right) x+=x_speed;
-    if(x >= 400){
+    if(x > 400){
         if(moving_left) x-=x_speed;
     }
 }

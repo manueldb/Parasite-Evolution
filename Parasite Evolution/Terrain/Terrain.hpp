@@ -12,6 +12,7 @@ public:
     std::vector<Stone> stones;
     Terrain();
     void createStones(int);
+    void createVerticalStones(Stone);
     void draw(sf::RenderWindow&);
     int getGreatestX();
 };
