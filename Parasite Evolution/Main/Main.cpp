@@ -2,6 +2,7 @@
 
 int main(){
     int counter = 0;
+    bool create = false;
     //initialize terrain
     Terrain terrain;
     //----//
@@ -65,7 +66,17 @@ int main(){
 
         //draw terrain
         terrain.draw(window);
-        cout << terrain.stones.size() << endl;
+        cout << "Size - " << terrain.stones.size() << endl;
+        cout << "parasite.x - " << parasite.x << endl;
+        cout << "create - " << create << endl;
+        //----//
+
+        //ugly generation
+        if(parasite.x % 64 == 0){
+            create = true;
+        }else{create = false;}
+
+        if(create){terrain.createStones(terrain.stones.size()+1, parasite.x+400);}
         //----//
 
         //draw parasite
@@ -76,9 +87,9 @@ int main(){
 
         //view
         view.setCenter(parasite.x, parasite.y - 195);
-        if(terrain.getGreatestX() - parasite.x < 400){
+        /*if(terrain.getGreatestX() - parasite.x < 400){
             terrain.createStones(terrain.stones.size()+1);
-        }
+        }*/
         window.setView(view);
         //----//
 
@@ -100,7 +111,11 @@ player collision detection with blocks - 20 min ----> DONE
 end terrain generation algorithm (__destroy that bug__ -- > DESTROYED), with the noise function - 3 h ------> BUG DESTROYED!! GENERATION WORKING!
 ^^^ ALMOST DONE... JUST NEED TO IMPLEMENT THE RANDOMNESS OF THE Y COORDINATE!
 Another bug emerged -> trying to create vertical blocks images are corrupted -.-
+vertical stones and createstones are compatible! yay
+now just need to make random!!
 
+
+BORING STUFF:
 
 player animation while moving - 20 min
 

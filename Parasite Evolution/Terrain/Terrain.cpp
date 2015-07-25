@@ -1,7 +1,7 @@
 #include "Terrain.hpp"
 
 Terrain::Terrain(){
-    stones.resize(13);
+    stones.resize(14);
     int x = 0;
     int y = 536;
     for(int i = 0; i < stones.size(); i++){
@@ -19,17 +19,16 @@ Terrain::Terrain(){
     }
 }
 
-void Terrain::createStones(int new_number_blocks){
+void Terrain::createStones(int new_number_blocks, int player_x){
     int old_number_blocks = stones.size();
+    int x = player_x;
     stones.resize(new_number_blocks);
-    int x = 64*old_number_blocks;
     int y = 536;
     for(int i = 0; i < old_number_blocks; i++){
         stones[i].reTexture();
     }
     for(int i = old_number_blocks; i < new_number_blocks; i++){
         stones[i].sprite.setPosition(x, y);
-        x+=64;
     }
 }
 
@@ -56,5 +55,11 @@ void Terrain::draw(sf::RenderWindow& window){
 }
 
 int Terrain::getGreatestX(){
-    return stones.size()*64;
+    int x_max = 0;
+    for(int i = 0; i < stones.size(); i++){
+        if(stones[i].x > x_max){
+            x_max = stones[i].x;
+        }
+    }
+    return x_max;
 }
