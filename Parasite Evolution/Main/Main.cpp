@@ -1,6 +1,7 @@
 #include "Main.hpp"
 
 int main(){
+    int counter = 0;
     //initialize terrain
     Terrain terrain;
     //----//
@@ -64,6 +65,7 @@ int main(){
 
         //draw terrain
         terrain.draw(window);
+        cout << terrain.stones.size() << endl;
         //----//
 
         //draw parasite
