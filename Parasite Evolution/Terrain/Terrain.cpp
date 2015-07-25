@@ -10,7 +10,10 @@ Terrain::Terrain(){
             createVerticalStones(stones[i]);
         }
         else{
-            stones[i].sprite.setPosition(x,y);
+            if(!stones[i].vertical){
+                stones[i].sprite.setPosition(x,y);
+
+            }
         }
         x+=64;
     }
@@ -38,8 +41,9 @@ void Terrain::createVerticalStones(Stone stone){
         stones[i].reTexture();
     }
     int y = 536;
-    int x = stone.x;
+    int x = stone.x+64;
     for(int i = old_number_stones; i < stones.size(); i++){
+        stones[i].vertical = true;
         stones[i].sprite.setPosition(x, y);
         y-=64;
     }

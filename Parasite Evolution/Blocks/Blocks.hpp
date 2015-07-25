@@ -8,6 +8,7 @@ public:
     int side = 64;
     sf::Sprite sprite;
     sf::Texture texture;
+    bool vertical = false;
 
     bool collision(int, int);
 };
