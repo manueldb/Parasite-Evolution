@@ -23,12 +23,13 @@ void Terrain::createStones(int new_number_blocks, int player_x){
     int old_number_blocks = stones.size();
     int x = player_x;
     stones.resize(new_number_blocks);
-    int y = 536;
+    int y = 536 - 64 * (rand() % 3);
     for(int i = 0; i < old_number_blocks; i++){
         stones[i].reTexture();
     }
     for(int i = old_number_blocks; i < new_number_blocks; i++){
         stones[i].sprite.setPosition(x, y);
+        createVerticalStones(stones[i]);
     }
 }
 

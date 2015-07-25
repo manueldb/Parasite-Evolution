@@ -3,6 +3,7 @@
 #include "../Blocks/Blocks.hpp"
 #include<vector>
 #include <cstdlib>
+#include <stdlib.h>
 
 using namespace std;
 
